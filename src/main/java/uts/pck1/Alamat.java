@@ -1,6 +1,6 @@
 //Alamat.java
 package uts.pck1;
-public class Alamat{
+public class Alamat implements  MyInterface{
 	//atribut
 	private String namaJalan;
 	private int nmrJalan;
@@ -53,5 +53,8 @@ public class Alamat{
 			return (getNamaJalan().equalsIgnoreCase(alamat.getNamaJalan()) && getNmrJalan()== alamat.getNmrJalan() && getNamaKota().equals(alamat.getNamaKota()) );
 		}
 		return false;
+	}
+	public Object clone(){
+		return new Alamat(this);
 	}
 }

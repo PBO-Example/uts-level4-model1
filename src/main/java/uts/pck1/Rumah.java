@@ -1,6 +1,6 @@
 //Rumah.java
 package uts.pck1;
-public class Rumah extends Bangunan{
+public class Rumah extends Bangunan implements MyInterface{
 	//atribut
 	private int jmlKamarTidur;
 	private int jmlKamarMandi;
@@ -97,5 +97,8 @@ public class Rumah extends Bangunan{
 			return (getAlamat().equals(rumah.getAlamat()) && getTingkat()==rumah.getTingkat() && getJmlKamarTidur()== rumah.getJmlKamarTidur() && getJmlKamarMandi() == rumah.getJmlKamarMandi() && getHargaSewaSetahun()==rumah.getHargaSewaSetahun());
 		}
 		return false;
+	}
+	public Object clone(){
+		return new Rumah(this);
 	}
 }

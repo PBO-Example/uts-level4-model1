@@ -1,39 +1,47 @@
-# Selamat!! Anda sekarang sudah di UTS Praktikum Level 3 dari 4 Level
+# Selamat!! Anda sekarang sudah di UTS Praktikum Level 4 (Level Terakhir)
 Baca instruksi yang diberikan dengan baik.
 
 
 ## Kelas Diagram
-![Image of UTS Level 3](http://api.puro.del.ac.id/v1/file/7e4ec673247e1cdf9090657c10b80aef)
->Update program anda pada level 2 sehingga sesuai dengan  kelas diagram di atas. 
+![Image of UTS Level 4](http://api.puro.del.ac.id/v1/file/9bb555d1ff2501ee65aef9bf914f06cd)
+>Update program anda pada level 3 sehingga sesuai dengan  kelas diagram di atas. 
 
->**Perhatikan bahwa, pada level 3 ini, sejumlah atribut diangkat ke kelas Parent.**
+>**Perhatikan bahwa, pada level 4 ini, sejumlah kelas berelasi dengan interface MyInterface.**
 
->**Untuk mendapatkan nilai sempurna pada level ini, konsentrasi menyesuaikan kode program kelas Rumah.java dan kelas Alamat.java yang anda kerjakan pada level 2 sehingga mempunyai relasi dengan kelas Bangunan seperti yang ditunjukkan pada kelas diagram di atas.**
+>**Untuk mendapatkan nilai sempurna pada level ini, konsentrasi menyesuaikan kode program pada level 3 sehingga mempunyai relasi dengan interface MyInterface seperti yang ditunjukkan pada kelas diagram di atas.**
 
 ## Rubrik Penilaian 
-1. **[Poin 30]** test realisasi relasi antara kelas Rumah, Bangunan dan Alamat.
+1. **[Poin 20]** test realisasi relasi antara kelas Rumah dan MyInterface.
 	
 	
 	> Perintah test: 
 	
 	
-		>gradle test --tests TestRumah.testInheritance
+		>gradle test --tests TestRumah.testInterfaceI
 
-2. **[Poin 35]** test realisasi method setAlamat() dan getAlamat() dari kelas Bangunan
-
-	
-	> Perintah test: 
-	
-	
-		>gradle test --tests TestRumah.testGetSetAlamat
-
-3. **[Poin 35]** test realisasi method setTingkat() dan getTingkat() dari kelas Bangunan
+2. **[Poin 20]** test realisasi relasi antara kelas Alamat dan MyInterface.
 
 	
 	> Perintah test: 
 	
 	
-		>gradle test --tests TestRumah.testGetSetTingkat
+		>gradle test --tests TestRumah.testInterfaceII
+
+3. **[Poin 30]** test realisasi method clone() pada kelas Alamat 
+
+	
+	> Perintah test: 
+	
+	
+		>gradle test --tests TestRumah.testCloneAlamat
+
+4. **[Poin 30]** test realisasi method clone() pada kelas Rumah 
+
+	
+	> Perintah test: 
+	
+	
+		>gradle test --tests TestRumah.testCloneRumah
 
 
 **Catatan Penting:**

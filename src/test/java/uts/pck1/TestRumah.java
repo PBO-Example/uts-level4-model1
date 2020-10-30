@@ -20,6 +20,7 @@ public class TestRumah {
 	Rumah rum;
 	Alamat alamat;
 	
+	
 	static Stream<Arguments> rumArray1() {
     return Stream.of(
         Arguments.of(new Alamat(),3,6,4,9000000,true),
@@ -84,6 +85,40 @@ public class TestRumah {
 		Bangunan absCls = mock(Bangunan.class, CALLS_REAL_METHODS);
 		absCls.setTingkat(10);
 		absCls.getTingkat();
+	}
+	
+	@Test
+	public void testInterfaceI()
+	{ 
+		 rum = new Rumah();
+		 MyInterface mi=new Rumah(rum);
+		 assertEquals(rum, mi);
+	}
+	@Test
+	public void testInterfaceII()
+	{ 
+		 alamat = new Alamat();
+		 MyInterface mi=new Alamat(alamat);
+		 assertEquals(alamat, mi);
+	}
+	
+	@ParameterizedTest
+	@MethodSource("rumArray1")
+	public void testCloneAlamat(Alamat jln, int tkt, int tdr, int mnd, int hrg, boolean sta) {
+		Alamat rec = new Alamat(jln);
+		Alamat rec2 = (Alamat)rec.clone();
+		assertEquals(rec, rec2);
+		assertNotSame(rec,rec2, "should not point to same Object");
+	}
+	
+	@ParameterizedTest
+	@MethodSource("rumArray2")
+	public void testCloneRumah(Rumah r) {
+		Rumah rec = new Rumah(r);
+		Rumah rec2 = (Rumah)rec.clone();
+		assertEquals(rec, rec2);
+		assertNotSame(rec,rec2, "should not point to same Object");
+		assertNotSame(rec.getAlamat(),rec2.getAlamat(), "should not point to same Object");
 	}
 	
 		
