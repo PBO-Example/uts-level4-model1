@@ -27,7 +27,9 @@ public class Alamat {
 	/*tulis method toString() di sini*/
 	/*Method toString() akan mengembalikan sebuah string, baca file Readme.md*/
 	
-
+	
+	/*Silahkan override method clone di sini*/
+	
 	
 	//method ini tidak boleh dihapus atau diubah
 	public boolean equals(Object o){
@@ -37,7 +39,5 @@ public class Alamat {
 		}
 		return false;
 	}
-	public Object clone(){
-		return new Alamat(this);
-	}
+	
 }
