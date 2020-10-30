@@ -1,6 +1,6 @@
 //Bangunan.java
 package uts.pck1;
-public abstract class Bangunan{
+public  class Bangunan{
 	//atribut
 	/*deklarasikan atribut di sini*/
 	
